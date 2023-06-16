@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.botao {
+    display: flex;
+    width: 400px;
+    height: 100px;
+    background-color: #3883d1;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 50px;
+    border-radius: 30px;
+    font-family: Arial;
+    box-shadow: 2px 2px 7px black;
+}
+
+.botao:hover{
+    background-color: #79bbff;
+}

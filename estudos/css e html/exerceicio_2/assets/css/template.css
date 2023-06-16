@@ -1,0 +1,95 @@
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.bloco {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-top: 50px;
+    border: 3px solid #f1f1f1;
+    width: 500px;
+    background-color: floralwhite;
+}
+
+.container {
+    padding: 16px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img_form {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    border-radius: 200px;
+}
+
+.username {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.username_label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.username_input #username {
+    height: 40px;
+    width: 80%;
+}
+
+.username_input {
+    width: 580px;
+}
+
+.password {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 30px;
+}
+
+.password_label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.password_input #password {
+    height: 40px;
+    width: 80%;
+}
+
+.password_input {
+    width: 580px;
+}
+
+.botaoOk {
+    margin-top: 20px;
+}
+
+.botaoOk #botaoOk {
+    background-color: #028d02;
+    border: none;
+    width: 462px;
+    height: 50px;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.rememberMe,
+.esqueciSenha {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.abaixoBotao {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+}
+

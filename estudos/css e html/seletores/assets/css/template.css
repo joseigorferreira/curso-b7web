@@ -1,0 +1,17 @@
+#itens th {
+     border: 2px solid blue;
+     background-color: darkgray;
+ }
+
+#itens th td {
+     text-align: center;
+ }
+
+#itens td {
+     border: 1px solid blue;
+     padding-right: 30px;
+ }
+
+ table tr:nth-child(even) {
+    background-color:aquamarine ;
+  }

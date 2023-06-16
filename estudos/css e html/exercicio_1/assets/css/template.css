@@ -1,0 +1,101 @@
+* {
+    font-family: Arial;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 990px;
+    background-color: aqua;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.title_text {
+    justify-content: center;
+}
+
+.title_text h1, .title_text h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+
+.title_text h1 {
+    font-size: 70px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 3px 3px 0px #FFFFFF;
+}
+
+.citacao {
+    text-align: center;
+}
+
+.citacao .texto {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.citacao .autor {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.title_image {
+    align-items: center;
+}
+
+.title_image img { 
+    width: 600px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.sobre_text {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+section .sobre_title {
+    padding-left: 20px ;
+    padding-top: 30px;
+}
+
+.todo_sobre {
+    margin: 20px;
+    border: 5px solid #FFFFFF;
+}
+
+.vida_real_title {
+    padding-left: 20px ;
+    padding-top: 30px;
+}
+
+.vida_real_lista {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+}
+
+.vida_real_todo {
+    margin: 20px;
+    border: 5px solid #FFFFFF;
+}

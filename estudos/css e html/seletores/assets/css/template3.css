@@ -1,0 +1,30 @@
+
+.aviso {
+    display: flex;
+    width: 600px;
+    height: 100px;
+    background-color: #3883d1;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 7px black;
+    left: -200px;
+    top: 50px;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+.teste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 580px;
+    height: 80px;    
+    border-top: 2px solid #FFF;
+    border-bottom: 2px solid #FFF;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Arial;
+    text-shadow: 2px 2px 7px black;
+}
+

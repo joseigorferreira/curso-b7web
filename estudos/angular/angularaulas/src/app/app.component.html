@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+
+<input
+  type="text"
+  #newTarefa
+  (keyup)="0"
+  (keyup.enter)="addTarefa(newTarefa.value); newTarefa.value=''"
+/>
+<button
+  (click)="addTarefa(newTarefa.value); newTarefa.value=''"
+>Adicionar</button>
+
+<ul>
+  <li *ngFor="let tarefa of tarefas">
+    {{tarefa.titulo}}
+  </li>
+</ul>

@@ -1,0 +1,9 @@
+#titleField,
+#bodyField {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#bodyField{
+    height: 100px;
+}

@@ -1,14 +1,13 @@
-function clicou() {
+async function clicou() {
 
-    let cep = document.querySelector('#cep').value;
-
-    console.log(cep);
-
-    fetch(`http://viacep.com.br/ws/${cep}/json/`)
+    fetch(`http://viacep.com.br/ws/61920540/json/`)
         .then((response) => {return response.json()})
         .then((json) => {
             alert(`${json.logradouro}, ${json.bairro} - ${json.localidade} - ${json.uf}`);
         })
+        .catch(() => {
+            alert("Deu erro na requisição");
+        });
 }
 
 

@@ -1,17 +1,11 @@
 'use client'
 
-import { FotoItem } from "@/components/FotoItem";
-import { Galeria } from "@/components/Galeria";
-import { Modal } from "@/components/Modal";
-import { Quiz } from "@/components/Quiz";
-import { fotos } from "@/data/fotos";
-import { useState } from "react";
+import { TelaLogin } from "@/components/TelaLogin";
 
 const Page = () => {
-
   return (
     <div className="mx-2 bg-blue-600 w-full h-screen flex justify-center items-center">
-      <Quiz></Quiz>
+      <TelaLogin></TelaLogin>
     </div>
   );
 }

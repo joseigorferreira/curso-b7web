@@ -1,12 +1,11 @@
 'use client'
 
-import { ExercicioPost } from "@/components/ExercicioPost";
-import { TelaLogin } from "@/components/TelaLogin";
+import { ExercicioDarkMode } from "@/components/ExercicioDarkMode";
 
 const Page = () => {
   return (
     <div className="">
-      <ExercicioPost></ExercicioPost>
+      <ExercicioDarkMode></ExercicioDarkMode>
     </div>
   );
 }

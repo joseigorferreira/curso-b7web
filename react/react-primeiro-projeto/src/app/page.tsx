@@ -1,5 +1,6 @@
 'use client'
 
+
 import { TelaConsultaCliente } from "@/components/consultas-api/TelaConsultaCliente";
 import { Cliente } from "@/types/Cliente";
 import { User } from "@/types/User";
@@ -32,7 +33,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="">
+    <div>
       {/* <TelaConsultaCliente></TelaConsultaCliente> */}
       <ul>
         {users.map(item =>
@@ -59,7 +60,7 @@ const Page = () => {
           </div>
         )}
       </ul>
-    </div>
+    </div >
   );
 }
 

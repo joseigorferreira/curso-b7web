@@ -19,3 +19,5 @@ export const UserContextProvider = ({children} : Props) => {
         </UserContext.Provider>
     );
 } 
+
+export const userContextProvider = () => UserContextProvider;

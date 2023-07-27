@@ -7,35 +7,39 @@ import { User } from "@/types/User";
 import { useEffect, useState } from "react";
 
 const Page = () => {
-  const [loading, setLoading] = useState(true);
-  const [users, setUsers] = useState<Cliente[]>([]);
+  // const [loading, setLoading] = useState(true);
+  // const [users, setUsers] = useState<Cliente[]>([]);
 
-  async function getUsers() {
-    // const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const res = await fetch('http://172.17.0.2:8935/rest/WSCLIENTES/CNPJ/16383848000772',
-      {
-        headers: {
-          'Authorization': 'Basic aW50ZWdyYWRvcjphc2QxNDdA',
-          'content-type': 'application/json'
-        }
-      }
-    );
-    const data = await res.json();
-    console.log(data);
-    setUsers([data]);
-    console.log(users)
-  }
+  // async function getUsers() {
+  //   // const res = await fetch('https://jsonplaceholder.typicode.com/users');
 
-  useEffect(() => {
+  //   try {
+  //     const res = await fetch('http://172.17.0.2:8935/rest/WSCLIENTES/CNPJ/16383848000772',
+  //       {
+  //         headers: {
+  //           'Authorization': 'Basic aW50ZWdyYWRvcjphc2QxNDdA',
+  //           'content-type': 'application/json'
+  //         }
+  //       }
+  //     )
+  //     const data = await res.json();
+  //     console.log(data);
+  //     setUsers([data]);
+  //   } catch (error) { console.log("erro") };
 
-    getUsers();
+  //   console.log(users)
+  // }
 
-  }, []);
+  // useEffect(() => {
+
+  //   getUsers();
+
+  // }, []);
 
   return (
     <div>
-      {/* <TelaConsultaCliente></TelaConsultaCliente> */}
-      <ul>
+      <TelaConsultaCliente></TelaConsultaCliente>
+      {/* <ul>
         {users.map(item =>
           <div>
             <li>empresa: {item.empresa}</li>
@@ -59,7 +63,7 @@ const Page = () => {
             <li>tabela: {item.tabela}</li>
           </div>
         )}
-      </ul>
+      </ul> */}
     </div >
   );
 }

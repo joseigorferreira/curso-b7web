@@ -17,7 +17,7 @@ export const TelaConsultaCliente = () => {
             )
             const data = await res.json();
             // console.log(data);
-            setListaCliente(data);
+            setListaCliente([data]);
             console.log(listaCliente);
             console.log("finalizou a consulta")
         } catch (erro) {
@@ -26,8 +26,8 @@ export const TelaConsultaCliente = () => {
     }
 
     useEffect(() => {
-            getClientes();
-            // console.log(listaCliente);
+        getClientes();
+        // console.log(listaCliente);
     }, []);
 
     return (
@@ -36,15 +36,32 @@ export const TelaConsultaCliente = () => {
                 <h1>Lista de Clientes</h1>
             </div>
             <div>
-                {/* {listaCliente.map(
-                    cliente =>
-                        <ul key={cliente.codigo + cliente.loja}>
-                            <li>{cliente.codigo}</li>
-                            <li>{cliente.loja}</li>
-                            <li>{cliente.cnpj}</li>
-                            <li>{cliente.razao}</li>
-                        </ul>
-                )} */}
+                <ul >
+                    {listaCliente.map(
+                        cliente =>
+                            <div key={cliente.codigo + cliente.loja}>
+                                <li>empresa: {cliente.empresa}</li>
+                                <li>filial: {cliente.filial}</li>
+                                <li>codigo: {cliente.codigo}</li>
+                                <li>loja: {cliente.loja}</li>
+                                <li>razao: {cliente.razao}</li>
+                                <li>nome: {cliente.nome}</li>
+                                <li>tipo: {cliente.tipo}</li>
+                                <li>cnpj: {cliente.cnpj}</li>
+                                <li>ie: {cliente.ie}</li>
+                                <li>pessoa: {cliente.pessoa}</li>
+                                <li>email: {cliente.email}</li>
+                                <li>cep: {cliente.cep}</li>
+                                <li>endereco: {cliente.endereco}</li>
+                                <li>bairro: {cliente.bairro}</li>
+                                <li>uf: {cliente.uf}</li>
+                                <li>municipio: {cliente.municipio}</li>
+                                <li>ddd: {cliente.ddd}</li>
+                                <li>telefone: {cliente.telefone}</li>
+                                <li>tabela: {cliente.tabela}</li>
+                            </div>
+                    )}
+                </ul>
             </div>
         </div>
     );

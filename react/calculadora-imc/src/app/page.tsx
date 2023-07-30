@@ -10,7 +10,7 @@ const Page = () => {
 
   const [heightField, setHeightField] = useState<number>(0)
   const [weightField, setWeightField] = useState<number>(0)
-  
+
   const [showIMC, setShowIMC] = useState(false)
 
   const [imc, setIMC] = useState(0)
@@ -19,12 +19,12 @@ const Page = () => {
 
   const handleCalculateButton = () => {
 
-    if(showIMC){
+    if (showIMC) {
       return false;
     }
 
     if (heightField && weightField) {
-      setIMC((weightField/(heightField*heightField)))
+      setIMC((weightField / (heightField * heightField)))
       setShowIMC(!showIMC);
     } else {
       alert("Digite todos os campos!!!");
@@ -33,16 +33,16 @@ const Page = () => {
 
   useEffect(() => {
 
-    const myImc = calcIMC(weightField,heightField)
-    
-    if(myImc){
+    const myImc = calcIMC(weightField, heightField)
+
+    if (myImc) {
       setCardResult({
         text: myImc?.title,
         color: myImc.color,
         image: myImc.icon
       })
     }
-    
+
   }, [showIMC])
 
   const handleButtonBack = () => {
@@ -52,7 +52,7 @@ const Page = () => {
   }
 
   return (
-    <div className="w-screen h-screen bg-white">
+    <div className="w-screen h-screen">
       <header>
         <div className="max-w-4xl py-10 mx-auto ">
           <img src='/assets/powered.png' alt="" className="w-40"></img>
@@ -77,11 +77,19 @@ const Page = () => {
           </div>
         </div>
         <div className="flex-1 ml-10 max-w-4xl mt-10 mx-auto">
-          { !showIMC &&
-            <div className="flex grid grid-cols-1 md:grid-cols-2 gap-8">
+          {!showIMC &&
+            <div className="flex grid grid-cols-1 md:grid-cols-2 gap-8 ">
               {
-                levels.map(level => 
-                  <SingleCard hFull={showIMC} image={level.icon} text={level.title} color={level.color}></SingleCard>
+                levels.map((level, key) =>
+                  <div key={key}>
+                    <SingleCard hFull={showIMC} image={level.icon} text={level.title} color={level.color}></SingleCard>
+                    {/* <div className={`flex justify-center items-center flex-col w-full 
+                    ${showIMC ? 'h-full ' : 'h-40'}
+                    rounded-md`} style={{backgroundColor: level.color}}>
+                      <img className="w-10 mb-5 " src={level.icon} />
+                      <p className=" text-white text-2xl font-bold p-3">{level.title}</p>
+                    </div> */}
+                  </div>
                 )
               }
             </div>
@@ -90,8 +98,9 @@ const Page = () => {
             showIMC && cardResult &&
             <div className="w-full h-full flex items-center">
               <img src="/assets/leftarrow.png" className="absolute bg-blue-600 rounded-full p-3 w-20 
-              cursor-pointer -ml-10" alt="back" onClick={handleButtonBack}/>
+              cursor-pointer -ml-10" alt="back" onClick={handleButtonBack} />
               <SingleCard hFull={showIMC} image={cardResult?.image} text={cardResult.text} color={cardResult.color}></SingleCard>
+
             </div>
           }
         </div>

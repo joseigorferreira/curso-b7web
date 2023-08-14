@@ -2,6 +2,7 @@
 
 
 import { TelaConsultaCliente } from "@/components/consultas-api/TelaConsultaCliente";
+import { TesteGian } from "@/components/consultas-api/TesteGian";
 import { Cliente } from "@/types/Cliente";
 import { User } from "@/types/User";
 import { useEffect, useState } from "react";
@@ -38,7 +39,8 @@ const Page = () => {
 
   return (
     <div>
-      <TelaConsultaCliente></TelaConsultaCliente>
+      {/* <TelaConsultaCliente></TelaConsultaCliente> */}
+      <TesteGian></TesteGian>
       {/* <ul>
         {users.map(item =>
           <div>
